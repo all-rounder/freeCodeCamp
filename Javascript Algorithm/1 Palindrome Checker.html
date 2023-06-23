@@ -1,0 +1,27 @@
+
+<script>
+
+  function palindrome(str) {
+  
+    const reg = /[a-zA-Z0-9]/g;
+    let arr = str.toLowerCase().match(reg);
+    console.log(arr);
+  
+    let len = arr.length;
+    for (let i = 0; i < (len / 2) - 0.5; i++) {
+      console.log(arr[i]);
+      console.log(arr[len - 1 - i]);
+      if (arr[i] !== arr[len - 1 - i]) {
+        return false;
+      }
+    }
+  
+    return true;
+  }
+  
+  
+  console.log(palindrome("_eye"));
+  console.log(palindrome("0_0 (: /-\ :) 0-0"));
+  console.log(palindrome("five|\_/|four"));
+  </script>
+    

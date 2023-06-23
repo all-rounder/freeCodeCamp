@@ -1,0 +1,29 @@
+<script>
+
+  function sumPrimes(num) {
+    var sum = 0;
+  
+    function isPrime(num) {
+      for (var j = 2; j < num; j++) {
+        if (num % j === 0) {
+          return false;
+        }
+      }
+      console.log(i + ' is a prime number');
+      return true;
+    }
+  
+    for (var i = 2; i <= num; i++) {
+      if (isPrime(i)) {
+        sum += i;
+      }
+    }
+  
+    return sum;
+  }
+  
+  // test here
+  console.log(sumPrimes(10));
+    
+</script>
+    

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <style>
+        #survey-form ul {
+            list-style-type: none;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Let us know how we can improve freeCodeCamp</p>
+    <form id="survey-form">
+        <ul>
+            <li><label id="name-label" for="name">Name: </label><input id="name" required placeholder="Enter your name"></li>
+            <li><label id="email-label" for="email">Email: </label><input id="email" type="email" required placeholder="Enter your email"></li>
+            <li><label id="number-label" for="number">Age: </label><input id="number" type="number" min="1" max="100" placeholder="Enter your age"></li>
+            <li>
+                <p>Which option best describes your current role?</p>
+                <select id="dropdown">
+                    <option>Student</option>
+                    <option>Full-time Job</option>
+                    <option>Part-time Job</option>
+                </select>
+            </li>
+            <li>
+                <p>How likely is that you would recommend freeCodeCamp to a friend?</p>
+                <input type="radio" name="radio-buttons" value="1"><label>Definitely</label>
+                <input type="radio" name="radio-buttons" value="2"><label>Maybe</label>
+                <input type="radio" name="radio-buttons" value="3"><label>Not Sure</label>
+            </li>
+            <li>
+                <p>Things that should be improved in the future (Check all that apply):</p>
+                <input type="checkbox" value="1"><label>Front-end Projects</label>
+                <input type="checkbox" value="2"><label>Back-end Projects</label>
+            </li>
+            <li>
+                <label>Any Comments or Suggestions?</label>
+                <textarea placeholder="Enter your comment here..."></textarea>
+            </li>
+            <li><button id="submit" type="submit">Submit</button></li>
+        </ul>
+    </form>
+
+</body>
+</html>
+

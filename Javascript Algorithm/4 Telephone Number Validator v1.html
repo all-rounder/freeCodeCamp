@@ -1,0 +1,59 @@
+<script>
+
+  function telephoneCheck(str) {
+    console.log('original str: ' + str);
+  
+    function checkAreaCode(n) {
+      if (str[n] === '(') {
+        let newStr = str[n + 1] + str[n + 2] + str[n + 3];
+        console.log(newStr);
+  
+        if (str[n + 4] !== ')' || newStr.search(/\d{3}/) === -1) {
+          console.log('not start with (area code)');
+          return false;
+        }
+      }
+  
+      if (str[n] === ')' && str[n - 4] !== '(') {
+        console.log(') not paried with (');
+        return false;
+      }
+  
+      return true;
+    }
+  
+    // check first char
+    if (str[0] !== '(' && str[0].search(/\d/) === -1) {
+      console.log('not start with a number');
+      return false;
+    }
+  
+  
+    for (let i = 0; i < str.length - 4; i++) {
+      console.log('checking Area Code, char position. ' + i);
+      if (!checkAreaCode(i)) {return false;}
+    }
+  
+  
+  
+    str = str.replace(/[- ()]/g, '');
+    console.log('formatted str: ' + str);
+  
+    if (str.length < 10 || str.length > 11 || (str.length === 11 && str[0] !== '1')) {
+      console.log('length not 10 or 11: ' + str.length);
+      return false;
+    }
+  
+    return true;
+  }
+  
+  
+  console.log('return result: ' + telephoneCheck("1 (555) 555-5555"));
+  console.log('return result: ' + telephoneCheck("-1 (757) 622-7382"));
+  console.log('return result: ' + telephoneCheck("555)-555-5555"));
+  console.log('return result: ' + telephoneCheck("(555)5(55?)-5555"));
+  
+  
+  
+  </script>
+    

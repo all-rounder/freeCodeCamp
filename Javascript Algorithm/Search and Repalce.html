@@ -1,0 +1,16 @@
+
+<script>
+
+  function myReplace(str, before, after) {
+  
+    var uppercase_switch = before[0].match(/[A-Z]/) ? true : false;
+    after = uppercase_switch ? after[0].toUpperCase() + after.slice(1) : after;
+  
+    return str.replace(before, after);
+  }
+  
+  console.log(myReplace("Let us go to the store", "store", "mall"));
+  console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
+  
+  </script>
+  

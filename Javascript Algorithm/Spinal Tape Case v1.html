@@ -1,0 +1,19 @@
+
+<script>
+
+function spinalCase(str) {
+  var reg = /([a-z|A-Z])[a-z]+/g;
+  str = str.match(reg);
+  console.log(str);
+  var spinal_str = str.join('-').toLowerCase();
+  console.log(spinal_str);
+  return spinal_str;
+}
+
+spinalCase('This Is Spinal Tap');
+spinalCase('thisIsSpinalTap');
+spinalCase('The_Andy_Griffith_Show');
+spinalCase('Teletubbies say Eh-oh');
+spinalCase('AllThe-small Things');
+
+</script>

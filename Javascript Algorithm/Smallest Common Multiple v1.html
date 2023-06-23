@@ -1,0 +1,35 @@
+
+<script>
+
+  function smallestCommons(arr) {
+  
+    function passArr(item) {
+      if (result % item === 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  
+    let result = 0;
+  
+    arr = arr.sort((a, b) => a - b);
+    console.log(arr[0] + ', ' + arr[1]);
+  
+    const range = (start, stop, step) => 
+      Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+    let fullArr = range(arr[0], arr[1], 1);
+    console.log(fullArr);
+  
+    do {
+      result += arr[1];
+    } while (!fullArr.every(passArr));
+  
+    return result;
+  }
+  
+  // test here
+  console.log(smallestCommons([2,10]));
+  
+  </script>
+    

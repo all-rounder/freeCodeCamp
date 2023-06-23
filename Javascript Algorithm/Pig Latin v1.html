@@ -1,0 +1,28 @@
+
+<script>
+
+  function translatePigLatin(str) {
+  
+    var position = str.search(/[aeiou]+/);
+  
+    if (position > 0) {
+      str = str.slice(position) + str.slice(0, position) + 'ay'
+    } else if (position === 0) {
+      str = str + 'way';
+    } else {
+      str = str + 'ay';
+    }
+  
+    return str;
+  }
+  
+  console.log(translatePigLatin("consonant"));
+  console.log(translatePigLatin("paragraphs"));
+  console.log(translatePigLatin("glove"));
+  console.log(translatePigLatin("algorithm"));
+  console.log(translatePigLatin("eight"));
+  console.log(translatePigLatin("schwartz"));
+  console.log(translatePigLatin("rhythm"));
+  
+  </script>
+  

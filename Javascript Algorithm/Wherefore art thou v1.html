@@ -1,0 +1,48 @@
+
+<script>
+
+
+  function whatIsInAName(collection, source) {
+    var arr = [];
+    // Only change code below this line
+  
+    var len_source = Object.keys(source).length;
+    console.log('len_source:' + len_source);
+  
+    arr = collection.filter(col_filter);
+  
+    function col_filter(item, index, array) {
+  
+      console.log(item);
+      var match_times = 0;
+      var match = false;
+  
+      for (var prop in item) {
+        console.log(prop + ': ' + item[prop]);
+        console.log(prop + ': ' + source[prop]);
+  
+        if (source.hasOwnProperty(prop) && source[prop] === item[prop]) {
+          match_times += 1;
+          console.log('match_times:' + match_times);
+          if (match_times === len_source) {
+            match_times = 0;
+            match = true;
+            return match;
+          }
+        }
+  
+      }
+  
+      return match;
+    }
+  
+    // Only change code above this line
+    return arr;
+  }
+  
+  
+  var result = whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 });
+  console.log(result)
+  
+  </script>
+  

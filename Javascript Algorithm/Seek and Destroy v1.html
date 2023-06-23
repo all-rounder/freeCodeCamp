@@ -1,0 +1,41 @@
+
+<script>
+
+
+  function destroyer(arr) {
+    console.log(arr);
+    var l = arguments.length;
+    var removeWord;
+    var newArr = arr;
+    var i;
+    console.log('arguments length: ' + l)
+    for (i = 1; i < l; i++) {
+      console.log('no.' + (i + 1) + ' argument: ' + arguments[i]);
+      removeWord = arguments[i];
+      // newArr = arr.filter(filterArr);
+      newArr = newArr.filter(filterArr);
+      console.log('no.' + i + ' loop: ');
+      console.log(newArr);
+    }
+  
+    function filterArr(value, index, arr) {
+      console.log('removeWord: ' + removeWord)
+      console.log('value: ' + value)
+      if ( value !== removeWord) {
+        console.log(removeWord + ' not included, true, add ' + value + ' to array');
+        return true;
+      } else {
+        console.log(removeWord + 'included, false');
+        return false;
+      }
+    }
+  
+    return newArr;
+  }
+
+
+
+var result = destroyer(["tree", "hamburger", 53], "tree", 53);
+console.log(result)
+
+</script>

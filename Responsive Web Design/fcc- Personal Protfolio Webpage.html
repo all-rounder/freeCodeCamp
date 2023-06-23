@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <style>
+        @media screen and (min-width:980px) {
+            #navbar {
+                display: block;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #navbar {
+            position: fixed;
+            text-align: right;
+            width: 100%;
+            background-color: lightblue;
+        }
+
+        #welcome-section {
+            height: 55vh;
+            padding-top: 45vh;
+            background-color: lightblue;
+            text-align: center;
+        }
+        .project-tile {
+            width: 400px;
+            height: 300px;
+        }
+        .project-img {
+            width: 100%;
+            height: 250px;
+        }
+
+    </style>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <ul >
+                <a href="#welcome-section">About</a>
+                <a href="#projects">Work</a>
+                <a href="#contact">Contact</a>
+            </ul>
+        </nav>
+        <section id="welcome-section">
+            <h1>Hi, this is Andy.</h1>
+            <p>a web developer</p>
+        </section>
+        <section id="projects">
+            <div class="project-tile">
+                <img class="project-img" src="https://cloud.githubusercontent.com/assets/15967809/17642794/d084d718-6171-11e6-83fa-ede5d0a67ad2.png">
+                <p class="project-title"><a href="https://codepen.io/xiaoyao160/pen/PXajKm">Tribute Page</a></p>
+            </div>
+            <div class="project-tile">
+                <img class="project-img" src="https://cloud.githubusercontent.com/assets/15967809/17642771/7cd6a0c4-6171-11e6-87fb-915f6084d104.png">
+                <p class="project-title"><a href="https://codepen.io/FreeCodeCamp/pen/ONjoLe"></a>Random Quote Machine</a></p>
+            </div>
+        </section>
+        <section id="contact">
+            <a id="profile-link" href="https://www.freecodecamp.org/cityhunter" target="_blank">FCC Profile</a>
+        </section>
+
+    </div>
+
+</body>

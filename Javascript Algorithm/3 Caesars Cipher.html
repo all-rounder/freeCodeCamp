@@ -1,0 +1,25 @@
+<script>
+
+  function rot13(str) {
+    console.log(str);
+  
+    function decode(char) {
+      let num = char.charCodeAt(0);
+        // A - Z mapping 65 - 90
+  
+      if (num - 13 < 65) {  // M mapping 77
+        num += 13;
+      } else {
+        num -= 13;
+      }
+  
+      return String.fromCharCode(num);
+    }
+  
+    return str.replace(/\w/g, decode);
+  }
+  
+  
+  console.log(rot13("SERR PBQR PNZC"));
+  
+  </script>
